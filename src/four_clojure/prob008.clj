@@ -9,7 +9,7 @@
 
 (def ans #{:a :b :c :d})
 
-(=
- (= ans (set '(:a :a :b :c :c :c :c :d :d)))
+(= true
+   (= ans (set '(:a :a :b :c :c :c :c :d :d)))
 
- (= ans (clojure.set/union #{:a :b :c} #{:b :c :d})))
+   (= ans (clojure.set/union #{:a :b :c} #{:b :c :d})))

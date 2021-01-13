@@ -11,6 +11,7 @@
 
 (def ans [1 2 3 4])
 
-(= ans (conj [1 2 3] 4))
+(= true
+   (= ans (conj [1 2 3] 4))
 
-(= ans (conj [1 2] 3 4))
+   (= ans (conj [1 2] 3 4)))

@@ -5,19 +5,21 @@ Another go at 4Clojure.
 <https://www.4clojure.com/>
 
 
-Testing with simple bolean expressions.
+Testing multiple expressions with simple bolean expressions.
 
 The file can be run in Emacs/Cider with the C-x C-k combo.
 
 '''clojure
 (def ans 3)
-(=
+
+(= true
    (= ans (+ 1 2))
    (= ans (- 7 4)))
 ;; => true
 
 (def ans2 [3])
-(=
+
+(= true
    (= ans2 (rest [2 3]))
    (= ans2 (first [2 3]))
 ;; => false
