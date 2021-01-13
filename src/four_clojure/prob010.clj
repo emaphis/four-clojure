@@ -10,6 +10,7 @@
 
 (def ans 20)
 
-(= ans ((hash-map :a 10, :b 20, :c 30) :b))
+(=
+ (= ans ((hash-map :a 10, :b 20, :c 30) :b))
 
-(= ans (:b {:a 10, :b 20, :c 30}))
+ (= ans (:b {:a 10, :b 20, :c 30})))

@@ -10,8 +10,9 @@
 
 (def ans 3)
 
-(= ans (first '(3 2 1)))
+(=
+ (= ans (first '(3 2 1)))
 
-(= ans (second [2 3 4]))
+ (= ans (second [2 3 4]))
 
-(= ans (last (list 1 2 3)))
+ (= ans (last (list 1 2 3))))
