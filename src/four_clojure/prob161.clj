@@ -14,9 +14,6 @@
 
 (= true
    (clojure.set/superset? ans #{2})
-
    (clojure.set/subset? #{1} ans)
-
    (clojure.set/superset? ans #{1 2})
-
    (clojure.set/subset? #{1 2} ans))

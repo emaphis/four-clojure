@@ -13,15 +13,9 @@
 
 (= true
    (= ans (if-not false 1 0))
-
    (= ans (if-not nil 1 0))
-
    (= ans (if true 1 0))
-
    (= ans (if [] 1 0))
-
    (= ans (if [0] 1 0))
-
    (= ans (if 0 1 0))
-
    (= ans (if 1 1 0)))

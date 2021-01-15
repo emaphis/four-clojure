@@ -1,4 +1,4 @@
-(ns four-clojure.prob023)b
+(ns four-clojure.prob023)
 
 ;; #23 Reverse a Sequence
 

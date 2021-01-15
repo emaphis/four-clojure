@@ -16,7 +16,7 @@
         (recur (rest coll) (inc acc))))))
 
 (def ans1
-  (fn [coll] (reduce (fn [acc elem] (inc acc)) 0 coll)))
+  (fn [coll] (reduce (fn [acc _] (inc acc)) 0 coll)))
 
 (def ans
   #(reduce (fn [acc _] (inc acc)) 0 %))

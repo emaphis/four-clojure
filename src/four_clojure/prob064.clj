@@ -18,7 +18,5 @@
 
 (= true
    (= 15 (reduce ans [1 2 3 4 5]))
-
    (=  0 (reduce ans []))
-
    (=  6 (reduce ans 1 [2 3])))

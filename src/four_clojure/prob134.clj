@@ -13,9 +13,9 @@
 
 (def ans (fn [ky mp] (and (contains? mp ky) (nil? (ky mp)))))
 
+(def ans1 #(= nil (get %2 %1 false)))
+
 (= true
    (true?  (ans :a {:a nil :b 2}))
-
    (false? (ans :b {:a nil :b 2}))
-
    (false? (ans :c {:a nil :b 2})))

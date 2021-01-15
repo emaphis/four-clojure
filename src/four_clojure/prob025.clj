@@ -7,11 +7,21 @@
 
 ;; Write a function which returns only the odd numbers from a sequence.
 
-(def ans
+(def ans0
+  (fn [coll]
+    (loop [acc '() coll coll]
+      (if (empty? coll)
+        (reverse acc)
+        (if (odd? (first coll))
+          (recur (conj acc (first coll))
+                 (rest coll))
+          (recur acc (rest coll)))))))
+
+(def ansfg
   (fn [coll]
     (filter odd? coll)))
 
-;; #(filter odd? %
+;; #(filter odd? %)
 
 (= true
    (= (ans #{1 2 3 4 5}) '(1 3 5))
