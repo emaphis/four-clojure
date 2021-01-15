@@ -9,28 +9,30 @@
 (dotimes [i len]
   (swap! a + (nth lst i)))
 
+@a ;; => 55
 
 ;; `loop`
-
-(def len 10)
 
 (loop [acc 0 i 0]
   (if (= i len)
     acc
     (recur (+ acc (nth lst i)) (inc i))))
+;; => 55
 
-(def len 10)
 
-(loop [acc 0 l lst]
-  (if (empty? l)
+(loop [acc 0 lst lst]
+  (if (empty? lst)
     acc
-    (recur (+ acc (first l)) (rest l))))
+    (recur (+ acc (first lst)) (rest lst))))
+;; => 55
 
 ;; common pattern  - reduce
-;; (loop [acc _ l _]
-;;   (if (empty? l)
-;;     a
-;;     (recur (_ a (first l)) (rest l))))
+;; (loop [acc _ lst _]
+;;   (if (empty? lst)
+;;     acc
+;;     (recur (fun acc (first lst)) (rest lst))))
+
+;; (reduce fun acc lst)
 
 (reduce + 0 lst)  ;; => 55
 (reduce * 1 lst) ;; => 3628800

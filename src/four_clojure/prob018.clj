@@ -9,4 +9,6 @@
 ;; Filter returns a new sequence consisting of all the items of s for which (f item)
 ;; returns true.
 
-(= '(6 7) (filter #(> % 5) '(3 4 5 6 7)))
+(def ans '(6 7))
+
+(= ans (filter #(> % 5) '(3 4 5 6 7)))

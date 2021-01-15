@@ -1,4 +1,4 @@
-(ns four-clojure.prob023)
+(ns four-clojure.prob023)b
 
 ;; #23 Reverse a Sequence
 
@@ -14,12 +14,15 @@
         acc
         (recur (rest coll) (conj acc (first coll)))))))
 
-(def ans
+(def ans2
   (fn [coll]
     (reduce conj () coll)))
 
+(def ans
+  #(reduce conj () %))
+
 ;;(ans [1 2 3])
-;;(#(reduce conj () %) [1 2 3])
+
 
 (= true
    (= (ans [1 2 3 4 5]) [5 4 3 2 1])

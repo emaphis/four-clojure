@@ -7,6 +7,15 @@
 
 ;; Write a function which returns the sum of a sequence of numbers.
 
+(def ans0
+  (fn [coll]
+    (loop [acc 0 coll coll]
+      (if (empty? coll)
+        acc
+        (recur (+ (first coll) acc) (rest coll))))))
+
+;;(ans '(1 2 3))
+
 (def ans
   #(reduce + 0 %))
 
